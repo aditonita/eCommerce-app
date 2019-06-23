@@ -3,8 +3,12 @@ package com.shop.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.Generated;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +23,8 @@ import lombok.NoArgsConstructor;
 public class Stoc {
 
 	@Id
-	private long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 
 	private Integer stoc;
 

@@ -4,6 +4,7 @@ import com.shop.domain.enums.ProductType;
 
 import java.math.BigDecimal;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -40,7 +41,7 @@ public class Product {
 	@Lob
 	private byte[] image;
 
-	@OneToOne
-	@JoinColumn(name = "stoc")
+	@OneToOne(cascade={CascadeType.ALL})
+	@JoinColumn(name = "stoc_id")
 	private Stoc stoc;
 }

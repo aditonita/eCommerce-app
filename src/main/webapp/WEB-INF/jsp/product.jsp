@@ -28,7 +28,7 @@
             <form:errors path="stoc" cssClass="text-warning"/>
         </fieldset>
 
-        <button type="submit" class="btn btn-success">Add</button>
+        <button type="submit" class="btn-success">Add</button>
     </form:form>
 </div>
 

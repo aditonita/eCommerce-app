@@ -13,8 +13,8 @@ public class WelcomeController {
 
     @GetMapping("/")
     public String showWelcomePage(ModelMap model) {
-        String ionut = getLoggedinUserName();
-        model.put("name", ionut);
+        String Aurelian = getLoggedinUserName();
+        model.put("name", Aurelian);
         return "welcome";
     }
 
